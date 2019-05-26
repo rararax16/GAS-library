@@ -1,0 +1,29 @@
+<script>
+
+    const success_callback = (result) =>
+    {
+        // ・・・・・・・・
+    }
+
+    const fail_callback = (e) =>
+    {
+        // ・・・・・・・・
+    }
+
+    /*********************************************
+     *フロントからgasを実行するAPI
+     ********************************************/
+    const gas_exe_execute = () =>
+    {
+        /*+++++++++++++++++++++++
+         + [gas_function]       : gas実行関数
+         + [withSuccessHandler] : 処理完了時のコールバック
+         + [withFailureHandler]  : 処理失敗時のコールバック
+         +++++++++++++++++++++++*/
+        google.script.run
+            .withSuccessHandler(success_callback)
+            .withFailureHandler(fail_callback)
+            .gas_function();
+    }
+
+</script>
