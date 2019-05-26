@@ -84,16 +84,15 @@ function get_drive_name_id(get_json)
 
   //JSON形式に変換
   var set_json = {"result" : []} ;
-  for(var i=0 ; i<result.length; i++)
+  result.map(function(array)
   {
     var _json = {
-      "name" : result[i][0]
-      ,"id" : result[i][0]
+      "name" : array[0]
+      ,"id" : array[0]
     } ;
     set_json.result.push(_json) ;
-  }
+  })
 
   var result_json = JSON.stringify(set_json)
   return result_json
 }
-

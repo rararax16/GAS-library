@@ -13,8 +13,8 @@ function create_folder(get_json)
 
   var locate_folder = DriveApp.getFolderById(locate_folder_id);
 
-  for(var i=0; i<folder_name_array.length; i++)
+  folder_name_array.map(function(value)
   {
-      locate_folder.createFolder(folder_name_array[i]);
-  }
+    locate_folder.createFolder(folder_name_array[i]);
+  })
 }
