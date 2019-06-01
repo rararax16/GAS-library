@@ -15,6 +15,6 @@ function create_folder(get_json)
 
   folder_name_array.map(function(value)
   {
-    locate_folder.createFolder(folder_name_array[i]);
+    locate_folder.createFolder(value);
   })
 }
